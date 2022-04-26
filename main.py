@@ -41,10 +41,10 @@ prm = open("parameters.txt", "a")
 prm.write("Star{}b{}c \n".format("    ","      "))
 for i in range(1, N+1):
     b.append(round(random.uniform(0.01,1.0), 2))
-    c.append(round(random.uniform(0.01,b[-1]),2))
-    assert c[i-2] <= b[i-2]
-    assert b[i-2] <= 1.0
-    prm.write("%s     %s   %s \n" % (i, b[i-2], c[i-2]))
+    c.append(round(random.uniform(0.01,b[i-1]),2))
+    assert c[i-1] <= b[i-1]
+    assert b[i-1] <= 1.0
+    prm.write("%s     %s \n" % (b[i-2], c[i-2]))
 prm.close()
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
