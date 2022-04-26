@@ -25,19 +25,19 @@ class plot() :
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #						:: Functions - Plot ::
 
-	# def TrajectoryPlot(self): #Plot of the trajectory
-	# 	fig = plt.figure()
-	# 	ax  = plt.axes(projection='3d')
-	# 	for i in range(self.N) :
-	# 		ax.plot3D(self.x[i], self.y[i], self.z[i], label = "Trajectory", linewidth = 1)
-	# 		ax.scatter3D(self.impactx[i], self.impacty[i], self.impactz[i], c="red", label = "Intersection points")
-	# 		# ax.set_title("Trajectory of star", fontname = 'serif', size = 13)
-	# 		ax.set_xlabel("x", fontname = 'serif', size = 13)
-	# 		ax.set_ylabel("y", fontname = 'serif', size = 13)
-	# 		ax.set_zlabel("z", fontname = 'serif', size = 13)
-	# 		#ax.legend()
-	# 	plt.savefig("TrajectoryPlot.pdf")
-	# 	plt.show()
+	def TrajectoryPlot(self): #Plot of the trajectory
+		fig = plt.figure()
+		ax  = plt.axes(projection='3d')
+		for i in range(self.N) :
+			ax.plot3D(self.x[i], self.y[i], self.z[i], label = "Trajectory", linewidth = 1)
+			ax.scatter3D(self.impactx[i], self.impacty[i], self.impactz[i], c="red", label = "Intersection points")
+			# ax.set_title("Trajectory of star", fontname = 'serif', size = 13)
+			ax.set_xlabel("x", fontname = 'serif', size = 13)
+			ax.set_ylabel("y", fontname = 'serif', size = 13)
+			ax.set_zlabel("z", fontname = 'serif', size = 13)
+			#ax.legend()
+		plt.savefig("TrajectoryPlot.pdf")
+		plt.show()
 
 	def PoincarePlot(self): #Plot of the poincare section
 		for i in range(self.N):
@@ -48,25 +48,25 @@ class plot() :
 		plt.savefig("PoincarePlot.pdf")
 		plt.show()
 
-	# def EnergyPlot(self): #Plot of the energy as a function of time
-	# 	for i in range(self.N):
-	# 		print(statistics.stdev(self.energy[i]))
-	# 		plt.plot(self.time[i], self.energy[i])
-	# 		#plt.title("Energy as a function of time", fontname = 'serif', size = 13)
-	# 		plt.xlabel("Time", fontname = 'serif', size = 13)
-	# 		plt.ylabel("Energy", fontname = 'serif', size = 13)
-	# 		#plt.ylim([0., 0.1])
-	# 	plt.savefig("EnergyPlot.pdf")
-	# 	plt.show()
+	def EnergyPlot(self): #Plot of the energy as a function of time
+		for i in range(self.N):
+			print(statistics.stdev(self.energy[i]))
+			plt.plot(self.time[i], self.energy[i])
+			#plt.title("Energy as a function of time", fontname = 'serif', size = 13)
+			plt.xlabel("Time", fontname = 'serif', size = 13)
+			plt.ylabel("Energy", fontname = 'serif', size = 13)
+			#plt.ylim([0., 0.1])
+		plt.savefig("EnergyPlot.pdf")
+		plt.show()
 
-	# def AngMomPlot(self): #Plot of the angular momentum as a function of time
-	# 	for i in range(self.N):
-	# 		plt.plot(self.time[i], self.angmom[i])
-	# 		plt.title("Angular momentum as a function of time", fontname = 'serif', size = 13)
-	# 		plt.xlabel("Time", fontname = 'serif', size = 13)
-	# 		plt.ylabel("Energy", fontname = 'serif', size = 13)
-	# 	plt.show()
-	# 	plt.savefig("AngMomPlot.pdf")
+	def AngMomPlot(self): #Plot of the angular momentum as a function of time
+		for i in range(self.N):
+			plt.plot(self.time[i], self.angmom[i])
+			plt.title("Angular momentum as a function of time", fontname = 'serif', size = 13)
+			plt.xlabel("Time", fontname = 'serif', size = 13)
+			plt.ylabel("Energy", fontname = 'serif', size = 13)
+		plt.show()
+		plt.savefig("AngMomPlot.pdf")
 
 
 
