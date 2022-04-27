@@ -8,7 +8,10 @@ This code plots 3D orbits and Poincaré maps of _N_ stars in a galaxy assuming a
 ## Paramters and initial conditions
 The number of stars _N_, timestep _dt_, and total time _T_ are specified in **data.txt**.
 
-The initial conditions for the stars (positions and velocities) can be manually changed in line _36_ of **main.py**.
+The initial conditions for the stars (positions and velocities) can be manually changed in **line 36** of **main.py**.
+
+## The integrator
+The integrators used for now are _Euler_ and _4th-order Runge-Kutta_ integrators. You can choose the method in **line 58** of **main.py** by typing _euler_ or _rk4_.
 
 ## Usage
 
