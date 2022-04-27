@@ -34,6 +34,12 @@ angmom         = []
 #						:: Enter the initial conditions manually for all the stars ::
 
 init_condition = [[0.2, 0., 0., 0.3, 0.3, 0.1]]*N
+# init_condition = [[]]
+# init_condition[0] = [0.2, 0.7, 0, 0.3, 0.3, 0.1]
+# 
+# init_condition.append([0.2, 0.7, 0, 0.3, 0.3, 0.1])
+# init_condition.append([0.2, 0.7, 0, 0.3, 0.3, 0.1])
+# init_condition.append([0.2, 0.7, 0, 0.3, 0.3, 0.1])
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #						:: Generating random values for the parameters b and c and writing them in a text file ::
@@ -84,25 +90,3 @@ p.EnergyPlot()      #Plot of the energy as a function of time
 #p.AngMomPlot()     #Plot of the angular momentum as a function of time
 
 #p.animation() #Only use for one star
-
-#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-#						:: Deviation from the "perfect" orbit ::
-#This was used in order to do the plots of the deviation by saving the data in some text files
-
-#file = open('RK2.p', 'wb')
-#pickle.dump(map_list[i].GetPosition()[0], file)
-#pickle.dump(map_list[i].GetPosition()[1], file)
-#file.close()
-
-#file = open('RK1.p', 'rb')
-#X1 = pickle.load(file)
-#Y1 = pickle.load(file)
-#file.close()
-
-#file = open('RK2.p', 'rb')
-#X2 = pickle.load(file)
-#Y2 = pickle.load(file)
-#file.close()
-
-#d = deviation(X1, Y1, X2, Y2)
-#d.distance()
