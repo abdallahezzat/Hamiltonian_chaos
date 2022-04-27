@@ -37,7 +37,7 @@ init_condition = [[0.2, 0., 0., 0.3, 0.3, 0.1]]*N
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #						:: Generating random values for the parameters b and c and writing them in a text file ::
-prm = open("parameters.txt", "a")
+prm = open("parameters.txt", "x")
 prm.write("Star{}b{}c \n".format("    ","      "))
 for i in range(1, N+1):
     b.append(round(random.uniform(0.01,1.0), 2))
